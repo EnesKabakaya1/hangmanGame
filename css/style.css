@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: #f1f1f1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    width: 500px;
+    height: 600px;
+}
+
+.header {
+    text-align: center;
+}
+
+.hangman-draw {
+    fill: #f1f1f1;
+    stroke: #000;
+    stroke-width: 2;
+}
+
+.hangman-item {
+    display: none;
+}
+
+.hangman-popup {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    z-index: 9999;
+}
+
+.hangman-popup::before {
+    content: "";
+    height: 1028px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.685);
+    position: absolute;
+    z-index: -1;
+}
+
+.popup {
+    width: 500px;
+    height: 300px;
+    position: relative;
+    background: blue;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: #000;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 22px;
+}
+
+.popup-text {
+    font-size: 34px;
+    color: #f1f1f1;
+}
+
+.popup-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background: #f1f1f1;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.hangman {
+    display: flex;
+    width: 500px;
+    height: 320px;
+}
+
+.wrong-word {
+    padding: 10px 50px;
+}
+
+.word {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.letter {
+    border-bottom: 3px solid red;
+    font-size: 25px;
+    height: 40px;
+    width: 35px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+    }
+
+    .hangman {
+        width: 100%;
+    }
+
+    .word {
+        width: 330px;
+    }
+}
