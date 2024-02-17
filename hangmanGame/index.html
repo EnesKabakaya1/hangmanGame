@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>Hangman</div>
+            <div>Welcome The Hangman Game.</div>
+        </div>
+        <div class="hangman">
+            <svg height="250" width="250" class="hangman-draw">
+                <line x1="20" y1="220" x2="100" y2="220" />
+                <line x1="60" y1="220" x2="60" y2="20" />
+                <line x1="60" y1="20" x2="150" y2="20" />
+                <line x1="150" y1="20" x2="150" y2="50" />
+                <circle cx="150" cy="70" r="20" class="hangman-item" />
+                <line x1="150" y1="90" x2="150" y2="150" class="hangman-item" />
+                <line x1="150" y1="100" x2="130" y2="120" class="hangman-item" />
+                <line x1="150" y1="100" x2="170" y2="120" class="hangman-item" />
+                <line x1="150" y1="150" x2="130" y2="170" class="hangman-item" />
+                <line x1="150" y1="150" x2="170" y2="170" class="hangman-item" />
+            </svg>
+            <div class="wrong-word">
+                <div class="wrong-word-text">Wrong Words</div>
+                <div class="wrong-word-list"></div>
+            </div>
+        </div>
+        <div class="word"></div>
+        <div class="already-guessed-container"></div>
+        <div class="hangman-popup">
+            <div class="popup">
+                <div class="popup-text"></div>
+                <button class="popup-button">Play Again</button>
+                <button class="close">×</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
