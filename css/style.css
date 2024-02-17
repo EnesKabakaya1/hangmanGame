@@ -56,10 +56,6 @@ body {
     z-index: -1;
 }
 
-.wrong-word-text {
-    width: max-content;
-}
-
 .popup {
     width: 500px;
     height: 300px;
@@ -87,6 +83,23 @@ body {
     outline: none;
     border-radius: 2px;
     font-size: 22px;
+}
+
+.wrong-word-text {
+    width: max-content;
+}
+
+.keyboard {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.keyboard button {
+    padding: 7px;
+    width: calc(100% / 9 - 5px);
 }
 
 .popup-text {
@@ -139,5 +152,9 @@ body {
 
     .word {
         width: 330px;
+    }
+
+    .keyboard {
+        width: 400px;
     }
 }
