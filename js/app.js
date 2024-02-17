@@ -165,6 +165,39 @@ const updateWrongLettersEl = () => {
     }
 };
 
+
+for (let i = 97; i <= 122; i++) {
+    const button = document.createElement("button");
+    button.innerText = String.fromCharCode(i);
+    document.querySelector('.keyboard').appendChild(button);
+
+    button.addEventListener('click', () => {
+        const letter = button.innerText;
+
+        if (randomWord.includes(letter)) {
+            if (!correctLetters.includes(letter)) {
+                correctLetters.push(letter);
+                displayWord();
+            } else {
+                const alreadyGuessed = document.createElement('div');
+                alreadyGuessed.classList.add('already-guessed');
+                alreadyGuessed.innerText = `You already guessed ${letter}`;
+
+                alreadyGuessedContainer.append(alreadyGuessed);
+
+                setTimeout(() => {
+                    alreadyGuessed.remove();
+                }, 2000);
+            }
+        } else {
+            if (!wrongLetters.includes(letter)) {
+                wrongLetters.push(letter);
+                updateWrongLettersEl();
+            }
+        }
+    });
+}
+
 window.addEventListener('keydown', e => {
     const letter = e.key;
 
