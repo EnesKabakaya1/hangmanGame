@@ -56,6 +56,10 @@ body {
     z-index: -1;
 }
 
+.wrong-word-text {
+    width: max-content;
+}
+
 .popup {
     width: 500px;
     height: 300px;
