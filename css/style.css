@@ -98,8 +98,8 @@ body {
 }
 
 .keyboard button {
-    padding: 15px;
-    width: calc(100% / 5 - 5px);
+    padding: 10px;
+    width: calc(100% / 5 - 25px);
 }
 
 .popup-text {
