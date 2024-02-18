@@ -25,6 +25,10 @@ body {
     height: 600px;
 }
 
+.word-description {
+    margin-top: 20px;
+}
+
 .header {
     text-align: center;
 }
